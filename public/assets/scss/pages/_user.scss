@@ -1,0 +1,480 @@
+.photo-content{
+    position: relative;
+    .cover-photo{
+        background: url(../images/profile/12.jpg);
+        background-size: cover;
+        background-position: center;
+        min-height: 15.625rem;
+        width: 100%;
+        border-top-#{$dz-pos-left}-radius: $radius;
+        border-top-#{$dz-pos-right}-radius: $radius;
+    }
+
+}
+
+
+
+.user{
+    .user-info{
+        display:flex;
+        padding: 0.9375rem 1.25rem 1.5rem;
+        @include respond('phone-land'){
+            flex-wrap: wrap;
+        }
+        @include respond('phone') {
+            display:block;
+        }
+        .user-details {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+			
+            @include respond('phone') {
+                display:block;
+                
+            
+            }
+            .user-contact{
+                display: flex;
+                align-items: center;
+                padding-top: 1.125rem;
+                flex-wrap: wrap;
+               
+                .user-number {
+                    display: flex;
+                    align-items: center;
+                    margin-#{$dz-pos-right}: 1.5rem;
+                    margin-bottom: 0.625rem;
+                    @include respond('phone'){
+                        margin-bottom: 0.875rem;
+                    }
+                }
+                .user-email{
+                    display: flex;
+                    align-items: center;
+					margin-bottom: 0.625rem;
+                    @include respond('phone'){
+                        margin-bottom: 0.875rem;
+                    }
+                }
+                h4{
+                    margin: 0;
+                }
+            }
+    
+        }
+       
+    }
+}
+.user-photo {
+	min-width: 150px;
+    height: 150px;
+	position: relative;
+	z-index: 1;
+	margin-top: -4.5rem;
+	margin-#{$dz-pos-right}: 0.625rem;
+	img{
+        border: 4px solid $white;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+	
+	@include respond('phone') {
+		margin-#{$dz-pos-left}: auto;
+		margin-#{$dz-pos-right}: auto;
+		margin-bottom:1.25rem;
+        margin-top: -6.5rem;
+        width: 150px;
+	}
+}
+.profile-interest{
+    .row{
+        margin: 0 -0.0437rem;
+        .int-col{
+            padding: 0 0.0437rem;
+            .interest-cat{
+                margin-bottom: 0.0875rem;
+                position: relative;
+                display: block;
+                &:after{
+                    background: $black;
+                    bottom: 0;
+                    content: "";
+                    left: 0;
+                    opacity: 0.5;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    z-index: 0;
+                }
+              
+                p{
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    padding: 0.3125rem;
+                    left: 0;
+                    margin: 0;
+                    z-index: 1;
+                    color:white;
+                    font-size: 0.075rem;
+                }
+            }
+            
+        }
+    }
+}
+.profile-tab{
+    .nav-item{
+        .nav-link{
+            font-size: 1rem;
+            margin-right: 1.875rem;
+            transition: all 0.5s ease-in-out;
+            border: none;
+            border-bottom: 0.0125rem solid transparent;
+            color: $l-ctl;
+
+            &:hover, &.active{
+                border: 0;
+                background: transparent;
+                background: transparent;
+                border-bottom: 0.0125rem solid var(--primary);
+                color: var(--primary);
+            }
+			@include respond ('phone'){
+				margin-right:0rem;
+			}
+        }
+        
+    }
+}
+
+.side-detail {
+    display: flex;
+   .edit-profiil{
+    margin-#{$dz-pos-right}: 0.625rem;
+
+   }
+}
+.profile-uoloaded-post{
+    
+    img{
+        margin-bottom: 1.25rem;
+    }
+    a{
+        h4{
+            margin-bottom: 0.625rem;
+            color: $l-ctd;
+        }
+    }
+}
+
+.prot-blog {
+	padding: 30px 20px;
+	background-color:var(--primary);
+	position: relative;
+	overflow: hidden;
+	z-index: 0;
+    border-radius: $radius;
+	.post {
+		.text {
+			font-size: 18px;
+			font-weight: 400;
+			color: white;
+		}
+	}
+	.fill {
+		.text {
+			font-size: 20px;
+			font-weight: 600;
+			color: white;
+		} 
+		a {
+			background-color: white;
+			padding: 8px 15px;
+			font-size: 14px;
+			font-weight: 600;
+			border-radius:$radius;
+			color: #2A353A;
+            @include custommq($max:78.125rem){
+                padding: 5px 5px ;
+            }
+			@include respond ('phone'){
+				padding: 8px 17px;
+			}
+		}
+	}
+	.text-bla {
+		color: white!important;
+		font-size: 14px;
+		font-weight: 500;
+	}
+	p {
+		color: white;
+		font-weight: 400;
+	}
+	.shape {
+		position: absolute;
+		bottom: -70px;
+		#{$dz-pos-right}: -50px;
+		z-index: -1;
+		svg{
+			path {
+				fill: #3ab5ff;
+			}
+		}
+	}
+}
+
+ .messages{
+    .input-group.search-area {
+        flex-direction: row-reverse;
+        margin-#{$dz-pos-right}: 0.625rem;
+        input.form-control {
+            border-#{$dz-pos-left}: none;
+            background-color: #f3f3f3;
+			border: 0;
+			overflow: hidden;
+			height: 3rem;
+			padding-left: 0;
+        }
+        .input-group-text {
+            border-#{$dz-pos-right}: none;
+            background-color: #f3f3f3;
+			border: 0;
+			height: 3rem;
+			padding: 0;
+        }
+    }
+    .add{
+        background-color: var(--primary);
+        display: block;
+        width: 3rem;
+        height: 3rem;
+        border-radius: $radius;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .student{
+        border-bottom: 1px solid $border;
+    }
+}
+.pie-chart2{
+    .chart-group{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .radius-bar {
+			@include custommq($max:85.375rem){
+				width:50%;
+			}
+            @include respond('tab-land'){
+                flex: 0 0 50%;
+                margin-bottom: 0.875rem;
+               
+            }
+            @include respond('phone'){
+                flex: 0 0 100%;
+            }
+        }
+        .donut-chart-sale {
+           margin-bottom: 0.625rem;
+            small{
+                position: absolute;
+                top: 50%;
+                #{$dz-pos-left}: 50%;
+                transform: translate(-50%,-50%);
+                font-size: 1.125rem;
+                font-weight: 600;
+            }
+        }
+    }
+    .chart-info{
+        margin-top: 1rem;
+        padding-top: 0.625rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 3px dashed #6666663d;
+        @include respond('phone'){
+            flex-wrap: wrap;
+            .btn{
+                margin-top: 0.625rem;
+            }
+        }
+        p{
+            margin-bottom: 0;
+        }
+    }
+    
+}
+
+
+.profile-form{
+	
+	.bootstrap-select>.dropdown-toggle{
+		background-color: #fff;
+		padding: 12px 14px;
+		@include respond ('phone'){
+			padding: 16px 14px;
+		}
+		&:after {
+			font-size: 0.7rem;
+		}
+	}
+	
+	.btn-light{
+		&:hover,
+		&:focus{
+			color:$body-color;
+		}
+	}
+}
+.profile-card{
+	border-radius: $radius;
+	.card-header{
+		border-color: var(--border);
+		padding: 30px;
+		.title{
+			position: relative;
+			margin-bottom: 0;
+			color: $dark;
+			&:after{
+				content: "";
+				height: 3px;
+				width: 100%;
+				background-color: var(--primary);
+				position: absolute;
+				bottom: -31px;
+				#{$dz-pos-left}: 0;
+			}
+		}
+	}
+	.m-b30{
+		margin-bottom:30px;
+	}
+	.card-body{
+		padding: 40px 40px 10px;
+	}
+	.card-footer{
+		padding: 35px 40px 40px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-color: var(--border);
+		.btn-lg{
+			padding: 18px 50px;
+			font-size: 15px;
+		}
+		.btn-link{
+			font-size: 15px;
+			&:hover{
+				color:var(--primary);
+			}
+		}
+	}
+	@include respond('phone'){
+		.card-header{
+			padding: 25px;
+			.title{
+				&:after{
+					bottom: -26px;
+				}
+			}
+		}
+		.card-body{
+			padding: 25px 25px 0;
+		}
+		.card-footer{
+			padding: 25px 25px 25px;
+			.btn-lg{
+				padding: 18px 30px;
+			}
+		}
+	}
+}
+.author-profile{
+	text-align:center;
+	.card-body{
+		padding: 0;
+	}
+	.author-media{
+		position: relative;
+		margin-#{$dz-pos-left}: auto;
+		margin-#{$dz-pos-right}: auto;
+		margin-bottom: 20px;
+		display: inline-block;
+		img{
+			width: 130px;
+			border-radius: 100%;
+		}
+	}	
+	.author-info{
+		.title{
+			font-size:15px;
+			font-weight:500;
+			margin-bottom: 0;
+		}
+		span{
+			display:block;
+			color: $body-color;
+		}
+	}
+	.info-list{
+		li{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			font-size: 15px;
+			border-top: 1px solid var(--border);
+			padding: 18px 30px;
+			color: $dark;
+			a{
+				color: $dark;
+			}
+			span{
+				color: $body-color;
+				font-weight: 500;
+			}
+		}
+	}
+	.card-footer {
+		padding: 30px;
+		display: block;
+		.form-control {
+			height: 45px;
+			border-color: var(--border);
+			overflow:hidden;
+			line-height: 34px;
+		}
+	}
+	.upload-link {
+		position: absolute;
+		width: 35px;
+		height: 35px;
+		line-height: 32px;
+		background: #395ee2;
+		bottom: 0;
+		#{$dz-pos-right}: 0px;
+		box-shadow: 0 0 10px 0 rgba(0, 24, 128, 0.1);
+		border-radius: 100%;
+		color: #fff;
+		overflow: hidden;
+		border: 2px solid #fff;
+		.update-flie {
+			position: absolute;
+			opacity: 0;
+			z-index: 0;
+			width: 100%;
+			cursor: pointer;
+			#{$dz-pos-left}: 0;
+			height: 100%;
+		}
+	}
+}
+.draggable-mirror{
+	padding: 0.938rem 0.938rem!important;
+}

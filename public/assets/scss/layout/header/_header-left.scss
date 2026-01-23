@@ -1,0 +1,23 @@
+.header-left {
+    height: 100%;
+    display: flex;
+    align-items: center;
+	.breadcrumb{
+		margin-bottom:0;
+	}
+	
+	.dashboard_bar {
+		font-size: var(--dz-head-title-size);
+		font-weight: 600;
+		color:#000;
+		@include respond('phone-land') {
+			display:none;
+		}
+		&.sub-bar{
+			font-size:1.875rem;
+		}
+	}
+	
+	
+}
+

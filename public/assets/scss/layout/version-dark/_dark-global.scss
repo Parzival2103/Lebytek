@@ -1,0 +1,58 @@
+[data-theme-version="dark"] {
+    .bg-white{
+        background-color: $d-bg!important;
+    }
+    #ExtraData .apexcharts-series path,
+    .apexcharts-heatmap rect  {
+        stroke: transparent; 
+    }
+    .ds-2{
+      background-color: #452b90;
+    }
+    #activity1 line,
+    #Statistics line {
+        fill: rgba(255, 255, 255, 0.1);
+        stroke: rgba(255, 255, 255, 0.1); 
+    }
+
+    .morris_chart_height text tspan {
+		fill: $white;
+	}
+    #redial .apexcharts-datalabels-group text{
+        fill:#fff;
+    }
+    
+    #overiewChart line {
+        stroke: rgba(255, 255, 255, 0.1); }
+    .ct-grid {
+		stroke: rgba(255, 255, 255, 0.1);
+	  }
+      .list-group-item{
+        a{
+            &:hover{
+                color:$white;
+            }
+        }
+      }
+      .apexcharts-legend-text{
+        color:$white!important;
+      }
+      .apexcharts-gridlines-vertical line {
+        stroke: rgba(255, 255, 255, 0.1); }
+    #AllProject.apexcharts-series path {
+        stroke: rgba(255, 255, 255, 0.1); 
+        }
+      .apexcharts-datalabels-group {
+        stroke: #fff; }
+      #columnChart .apexcharts-bar-series path {
+        stroke: #182237;
+        }
+        #TotalEarning .apexcharts-series path {
+            stroke: transparent; }
+    .apexcharts-text tspan {
+        fill: #fff; }
+
+        .heading-data td{
+            background-color:$d-bg!important;
+        }
+}

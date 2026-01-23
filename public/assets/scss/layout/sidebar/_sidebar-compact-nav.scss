@@ -1,0 +1,231 @@
+////////////////
+// Compact Nav
+////////////////
+
+@media (min-width:47.9375rem) {
+    [data-sidebar-style="compact"] {
+
+
+		--dz-sidebar-width : 10rem;
+		--dz-side-nav-padding : 1rem 0.5rem;
+		--dz-side-nav-size : 0.9375rem;
+		--dz-side-info : none;
+		--dz-side-copyright : none;
+		--dz-side-sub_nav-padding : .5rem 0.5rem;
+		--dz-side-sub_nav-size : 0.85rem;
+		
+		.nav-header {
+			.nav-control {
+				display: none;
+			}
+		}
+		.header{
+			.nav-control{
+				display: none;
+			}
+			.header-content{
+				padding-#{$dz-pos-left}: 2rem;
+			}
+		}
+		.deznav {
+            .header-profile{
+				margin-bottom: 0.3125rem;
+				&>a.nav-link{
+					display:block;
+					text-align:center;
+					border:0;
+					img{
+						margin-bottom:0.3125rem;
+					}
+					.header-info{
+						margin-left:0!important;
+						text-align:center;
+						small{
+							text-align:center!important;
+						}
+						display:none;
+					}
+				}
+				.dropdown-menu{
+					min-width:11rem;
+				}
+				a svg{
+					display:unset!important;
+				}
+			}
+            .nav-user{
+                display: none;
+            }
+        
+            .metismenu {
+			
+                li {
+                    text-align: center;
+                    a {
+						svg{
+						
+							margin-right: 0.0125rem;
+							margin-top: -1.3875rem;
+						}
+						.menu-icon{
+						    display: block;
+							padding: 0;
+							background-color:rgba(13, 153, 255, 0.05);
+							color: rgba(0, 0, 0, 0.3);
+							width: 3.125rem;
+							height: 3.125rem;
+							line-height: 3.125rem;
+							border-radius: $radius;
+							line-height: 4.25rem;
+							margin-left: auto;
+							margin-right: auto;
+							margin-bottom: 0.3125rem;
+							
+						}
+						i{
+							@include transitionMedium;
+						}
+                    }
+					ul:after{
+						content:none;
+					}
+					
+					& > a{
+						box-shadow: none;
+						font-size: 0.813rem;
+					}
+					
+                }
+            }
+			
+			.plus-box,.copyright{
+				display: none;
+			}
+			.copyright{
+			    padding: 0 1.25rem;
+				margin-top: 1.25rem;
+			}
+			.header-info2{
+				padding:0;	
+				img{
+					margin-left:-1rem;	
+				}
+			}
+			.sidebar-info{
+				display:none!important;	
+			}
+			.header-profile2{
+				margin: 0 3rem;	
+			}
+			.feature-box,
+			.support-box,
+			.help-desk{
+				display:none;
+			}
+        }
+
+		
+        .nav-text {
+            display: inline-block;
+            margin-top: 0.3125rem;
+        }
+
+        .nav-label {
+            &.first{
+                display: none;
+            }
+        }
+
+        .nav-badge{
+            display: none;
+        }
+
+		&[data-layout="vertical"]{
+			.deznav {
+				.metismenu {
+					 & > li {
+						&:hover,
+						&.mm-active{
+							&>a i{
+								background-color:var(--primary);
+								color:$white;
+								
+							}
+							.nav-text{
+								color:var(--secondary);
+							}
+							&>a.has-arrow::after {
+								border-top-color: var(--secondary);
+								border-#{$dz-pos-left}-color: var(--secondary);
+								
+							}
+						}	
+					 }
+				}	
+				.dropdown-menu .dropdown-item{
+					font-size: .85rem;
+					padding: 0.5rem 1.2rem;
+				}
+			}
+		}
+    }
+}
+
+[data-layout="vertical"][data-sidebar-style="compact"] {
+
+	--dz-side-ico-height : 3.2rem;
+	--dz-side-ico-width : 3.2rem;
+	--dz-side-nav-size : 0.875rem;
+
+    .deznav {
+        .metismenu {
+		
+            ul{
+				margin-#{$dz-pos-left}:0;
+				border:0;
+				background: rgba(0,0,0,0.02);
+				padding: 0.625rem 0;
+
+				a{
+					&:before{
+						content:none;
+					}
+				}
+				
+            }
+
+            &>li {
+				&>a{
+					
+					.badge-xs{
+						&.style-1{
+							
+							display: none;
+						}
+					}
+					& > i{
+						margin-#{$dz-pos-right}: auto;
+						margin-#{$dz-pos-left}: auto;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						background: var(--body-bg);
+						border-radius: 50%;
+					}
+				}
+                &>a.has-arrow::after {
+                    top: 0.0625rem;
+					display: inline-block;
+					#{$dz-pos-right}: auto;
+					margin-#{$dz-pos-left}: 0.3125rem;
+					position: relative;
+					width: 0.4375rem;
+					height: 0.4375rem;
+					border-width: 0.125rem 0rem 0rem 0.125rem;
+					
+                }
+            }
+        }
+
+    }
+}

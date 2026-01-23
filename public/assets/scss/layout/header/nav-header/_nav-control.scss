@@ -1,0 +1,180 @@
+.nav-header {
+    height: var(--dz-header-height);
+    width: var(--dz-sidebar-width);
+    display: inline-block;
+    text-align: #{$dz-pos-left};
+    position: absolute;
+    top:0;
+    background-color:var(--nav-headbg);
+    transition: all .2s ease;
+    z-index: 7;
+	&.dez-bg{
+        background-size: 100% !important;
+        background-position: left !important;
+        background-attachment: fixed !important;
+        &:after{
+            content: "";
+            position: absolute;
+            top: 0;
+            #{$dz-pos-left}: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.45);
+            backdrop-filter: blur(3px);
+            z-index: -1;
+        }
+    }
+    &.light-logo{
+		.brand-title{
+            filter: brightness(30);
+		}
+	}
+	
+    .logo-abbr {
+        max-width: 2.9375rem;
+		@include respond('laptop') {
+			max-width: 2.8125rem;
+		}
+        @include respond ('tab-port'){
+            min-width: 2.8125rem;
+        }
+		@include respond('phone') {
+			width:2.1875rem;
+			height:2.1875rem;
+		}
+    }
+    .logo-compact {
+        display: none;
+    }
+	
+    .brand-logo {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 1.125rem;
+        color: $white;
+        text-decoration: none;
+        padding-#{$dz-pos-left}: 1.5rem;
+        padding-#{$dz-pos-right}: 1.5rem;
+        font-weight: 700;
+        
+		@include respond('laptop') {
+			padding-#{$dz-pos-left}: 1.25rem;
+			padding-#{$dz-pos-right}:1.25rem;
+		}
+        @include respond('phone-land') {
+            padding-#{$dz-pos-left}: 0;
+            padding-#{$dz-pos-right}: 0;
+            justify-content: center;
+        }
+    }
+    .brand-title {
+		margin-#{$dz-pos-left}: 0.9375rem;
+		max-width: 6.05rem;
+        @include respond('phone-land'){
+            display: none;
+        }
+    }
+	.rect-primary-rect{
+		fill:var(--primary);
+	}
+    @include respond('phone-land'){
+        width: 5rem;
+       
+    }
+}
+
+.nav-control {
+    cursor: pointer;
+    position: absolute;
+    #{$dz-pos-right}: -0.7rem;
+    text-align: center;
+    top: 50.8%;
+    transform: translateY(-50%);
+    z-index: 9999;
+    font-size: 1.4rem;
+    border-radius: 0.375rem;
+    background-color: #fff;
+    height: 30px;
+    width: 30px;
+    @include respond('phone-land') {
+        #{$dz-pos-right}: -1.5rem;
+    }
+	@include respond('phone') {
+        #{$dz-pos-right}: -1.5rem;
+    }
+}
+
+////////////////////
+// Humbuger Icon
+////////////////////
+.hamburger {
+    display: inline-block;
+    #{$dz-pos-left}: 0rem;
+    position: relative;
+    top: 0rem;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+    width: 1.625rem;
+    z-index: 999;
+}
+
+.hamburger svg {
+    position: absolute;
+    top: -19px;
+    #{$dz-pos-left}: 0;
+    z-index: 1;
+    
+    @include custommq($max:100rem){
+
+        top:-16px;
+    }
+	
+}
+.hamburger.is-active{
+	svg {
+		transform: rotate(180deg);
+	}
+}
+.hamburger:hover {
+    cursor: pointer;
+}
+
+[data-header-position="fixed"],
+[data-sidebar-position="fixed"][data-layout="vertical"],
+[data-sidebar-position="fixed"][data-header-position="fixed"]{
+    .nav-header{
+        position: fixed;
+    }
+}
+[data-sidebar-style="compact"][data-layout="vertical"] {
+    .nav-header {
+        .brand-title {
+            display: none;
+        }
+        .logo-compact {
+            max-width: 4.6875rem;
+        }
+        .brand-logo{
+            justify-content: center;
+        }
+    }
+}
+[data-sidebar-style="modern"][data-layout="vertical"] {
+    .nav-header {
+        .brand-title {
+            display: none;
+        }
+        .brand-logo{
+            justify-content: center;
+        }
+        .logo-compact {
+            display: none;
+        }
+    }
+}
+[data-nav-headerbg="color_3"] .nav-header .brand-logo .logo-abbr {
+    filter: brightness(20);
+}

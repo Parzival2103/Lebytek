@@ -1,0 +1,441 @@
+
+// Basic Input
+
+
+.form-control{
+    background: var(--card);
+    color: var(--text);
+	line-height: 1.7;
+    font-size: 0.9rem;
+	border-color:var(--border);
+	height: 2.813rem;
+	border-radius:$radius;
+
+	&::placeholder{
+		color:#888888;
+	}
+    &:hover,&:focus,&.active{
+        box-shadow: none;
+        background: var(--card);
+        color: var(--text);
+    }
+	&:focus{
+		border-color:var(--border);
+	}
+	&.solid{
+		background:var(--body-color);
+		border-color:var(--border);
+		color:var(--text-dark)
+		&[type="file"]{
+			padding: 6px 10px;
+		}
+	}
+	&.form-control-lg{
+		line-height:2.7rem;
+		
+		.dropdown-toggle{
+			padding:0.5rem 1rem;
+			height: 3.7rem;
+		}
+		
+	}
+	&.form-control-sm{
+		line-height: 1.9rem;
+		
+		.dropdown-toggle{
+			padding:0.25rem 1rem;
+			height: 2.3rem;
+		}
+		.dropdown-item{
+			line-height: 1.6rem;
+		}
+	}
+}
+.input-group-sm{
+	.form-control{
+		height:2.5rem;
+		
+		
+	}
+}
+
+.form-check{
+	padding: 0;
+	padding-#{$dz-pos-left}: 1.5em;
+	.form-check-input{
+		float: #{$dz-pos-left};
+    	margin-#{$dz-pos-left}: -1.5em;
+	}
+}
+.input-group-lg{
+	.form-control{
+		height:4.5rem;
+		
+		
+	}
+}
+
+.input-rounded {
+    border-radius: 6.25rem;
+}
+
+
+.input-rounded {
+    border-radius: 6.25rem;
+}
+
+
+// Input Color
+[data-theme-version="light"],
+[data-theme-version="dark"] {
+	.input-primary{
+		.form-control{
+			border-color:var(--primary);
+		}	
+		.input-group-text{
+			background-color:var(--primary);
+			color:$white;
+		}
+	}
+	.input-danger{
+		.form-control{
+			border-color:$danger;
+		}	
+		.input-group-text{
+			background-color:$danger;
+			color:$white;
+		}
+	}
+	.input-info{
+		.form-control{
+			border-color:$info;
+		}	
+		.input-group-text{
+			background-color:$info;
+			color:$white;
+		}
+	}
+	.input-success{
+		.form-control{
+			border-color:$success;
+		}	
+		.input-group-text{
+			background-color:$success;
+			color:$white;
+		}
+	}
+	.input-warning{
+		.form-control{
+			border-color:$warning;
+		}	
+		.input-group-text{
+			background-color:$warning;
+			color:$white;
+		}
+	}
+}
+// Input Outline
+[data-theme-version="light"],
+[data-theme-version="dark"] {
+	.input-primary-o{
+		.form-control{
+			border-color:var(--primary);
+			
+		}	
+		.input-group-text{
+			background-color:transparent;
+			border-color:var(--primary);
+			color:var(--primary);
+		}
+	}
+	.input-danger-o{
+		.form-control{
+			border-color:$danger;
+		}	
+		.input-group-text{
+			background-color:transparent;
+			border-color:$danger;
+			color:$danger;
+		}
+	}
+	.input-info-o{
+		.form-control{
+			border-color:$info;
+		}	
+		.input-group-text{
+			background-color:transparent;
+			border-color:$info;
+			color:$info;
+		}
+	}
+	.input-success-o{
+		.form-control{
+			border-color:$success;
+		}	
+		.input-group-text{
+			background-color:transparent;
+			border-color:$success;
+			color:$success;
+		}
+	}
+	.input-warning-o{
+		.form-control{
+			border-color:$warning;
+		}	
+		.input-group-text{
+			background-color:transparent;
+			border-color:$warning;
+			color:$warning;
+		}
+	}
+}
+
+
+// Input Group
+.input-group-text{
+    min-width: 3.125rem;
+	justify-content: center;
+	border-radius: $radius-sm;
+	border-color:var(--border);
+}
+.form-file-label{
+    height: 2.5rem;
+	padding: 0.5rem 0.75rem;
+}
+.input-group-prepend .btn,
+.input-group-append .btn {
+    z-index: 0;
+}
+.custom-select{
+    background: none;
+    border-color: $border;
+    color: $dark;
+    &:focus{
+        box-shadow: none;
+        border-color: var(--primary);
+        color: var(--primary);
+    }
+}
+.form-file-label{
+	background: #656C73;
+	white-space: nowrap;
+	color: $white;
+	@at-root [data-theme-version="dark"] & {
+		background: $d-border;
+		border-color: $d-border;
+		color: $body-color;
+	}
+}
+
+.custom_file_input {
+    .form-file-label::after {
+        height: 100%;
+    }
+}
+
+
+.form-control:disabled,
+ .form-control[readonly] {
+    background: var(--card);
+    opacity: 1;
+}
+
+.form-file{
+	border: 0.0625rem solid $border;
+    background: $white;
+	@at-root [data-theme-version="dark"] & {
+        background: $d-bg;
+		border-color: $d-border;
+    }
+}
+.input-group{
+	> .form-control-plaintext,
+	  > .form-select,
+	  > .form-file {
+		position: relative; // For focus state's z-index
+		flex: 1 1 auto;
+		// Add width 1% and flex-basis auto to ensure that button will not wrap out
+		// the column. Applies to IE Edge+ and Firefox. Chrome does not require this.
+		width: 1%;
+		margin-bottom: 0;
+
+	  }
+	
+}
+
+
+.select2-container--default 
+.select2-selection--multiple
+ .select2-selection__choice{
+	border-radius:$radius;
+}
+
+.form-file{
+	.form-control{
+		margin:0;
+		border-radius:0;
+		border:0;
+		height:auto;
+	}
+}
+
+
+.form-file{
+	.form-control{
+		margin:0;
+		border-radius:0;
+		border:0;
+		height:auto;
+	}
+}
+.input-group{
+	.input-group-text + .form-file{
+		border-radius:0 0.5rem 0.5rem 0;
+		.form-control{
+			border-radius: inherit;
+		}
+	}
+}
+
+.custom_file_input{
+	.form-file{
+		border-radius:0.5rem;
+		.form-control{
+			margin:0;
+			border:0;
+			line-height: 2.625rem;
+			border-radius: inherit;
+			font-size: 16px;
+			font-weight: 600;
+		}
+	}
+	.form-control{
+		padding-#{$dz-pos-left}: 10px;
+		line-height: 45px;
+	}
+}
+#username{
+	border-radius: 0 6px 6px 0;
+}
+.form-control-lg{
+	min-height: 3.75rem;
+	padding: 0.5rem 0.75rem;
+    font-size: 1.09375rem;
+    border-radius: 0.5rem;
+	height: calc(1.5em + 1rem + 2px);
+	
+}
+.form-control-sm{
+	min-height:2.5rem;
+   padding: 0.25rem 0.5rem;
+    font-size: 0.76563rem;
+    border-radius: 0.5rem;
+	height: calc(1.5em + 0.5rem + 2px);
+	&[type="file"] {
+		line-height:2.5;
+		padding: 0.257rem 0.5rem;
+		
+	}
+}
+.ck.ck-editor__main>.ck-editor__editable{
+	background:lighten($dark, 55%)!important;
+}
+.modal-grid{
+	background:$body-bg;
+}
+.nice-select.wide.form-control-lg{
+	line-height: 2.7125rem;
+}
+.nice-select.wide.form-control-sm{
+	line-height: 1.8125rem;
+}
+.inline-check{
+	line-height: 1.8rem!important;
+}
+.form-check{
+	font-size: 14px;
+    font-weight: 600;
+}
+.input-full{
+	border:0;
+}
+.border-1{
+	border-radius: 0.5rem 0 0 0.5rem!important;
+}
+.border3{
+	border-radius:0 0.5rem 0.5rem 0!important;
+}
+.custome-input{
+	.input-group-text{
+		border-color:transparent!important;
+	}
+}
+.p2p-select{
+	.default-select{
+		height:3rem;
+	}
+}
+.input-group-lg{
+	.input-group-text{
+		border-radius:$radius;
+	}
+}
+.input-group-sm {
+	.input-group-text{
+		border-radius:$radius;
+	}
+}
+
+textarea.form-control {
+	min-height:auto;
+	height:auto!important;
+}
+.form-control[type="file"]{
+    line-height: 2.075rem;
+    padding-#{$dz-pos-left}: 0.75rem;
+}
+.form-control-sm[type="file"]{
+    line-height: 2rem;
+    padding: 0.25rem;
+    padding-#{$dz-pos-left}: 8px;
+}
+.form-control-lg[type="file"]{
+	line-height:2.65rem;
+	padding-#{$dz-pos-left}:0.625rem;
+}
+
+.bootstrap-select.show-tick .dropdown-menu .selected span.check-mark {
+	#{$dz-pos-right}: 15px;
+	#{$dz-pos-left} : auto;
+}
+
+.input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating){
+	border-top-#{$dz-pos-right}-radius: 0 !important;
+	border-bottom-#{$dz-pos-right}-radius: 0 !important;
+	border-top-#{$dz-pos-left}-radius: $radius;
+	border-bottom-#{$dz-pos-left}-radius: $radius;
+}
+.input-group > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+    margin-#{$dz-pos-left}: calc(var(--bs-border-width) * -1);
+    border-top-#{$dz-pos-left}-radius: 0;
+    border-bottom-#{$dz-pos-left}-radius: 0;
+	border-top-#{$dz-pos-right}-radius: $radius;
+    border-bottom-#{$dz-pos-right}-radius: $radius;
+}
+.input-group:not(.has-validation) > .dropdown-toggle:nth-last-child(n + 3){
+	border-top-#{$dz-pos-right}-radius: 0;
+    border-bottom-#{$dz-pos-right}-radius: 0;
+	border-top-#{$dz-pos-left}-radius: $radius;
+    border-bottom-#{$dz-pos-left}-radius: $radius;
+}
+.input-group button.dropdown-toggle.dropdown-toggle-split:nth-child(2){
+	border-radius: 0 !important;
+}
+.vertical-radius{
+	.input-group:not(.has-validation){
+		:not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating).br-style{
+			border-top-#{$dz-pos-right}-radius:$radius!important;
+			border-bottom-#{$dz-pos-right}-radius:$radius!important;
+		}
+	}
+}

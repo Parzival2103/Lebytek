@@ -1,0 +1,29 @@
+.navbar_content {
+    .navbar {
+        padding: 0;
+        margin: 8px 0;
+        .container-fluid {
+            padding: 10px;
+        }
+        &.fixed-top {
+            position: static;
+            margin: 1rem -1rem 0rem -1rem;
+        }
+        &.fixed-bottom {
+            position: static;
+            margin: 1rem 0rem 1rem -1rem;
+        }
+    }
+    .container {
+        margin: 0;
+    }
+}
+.navbar-page {
+    .nav-link.disabled,
+    .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+        color: var(--text-dark);
+    }
+    .bg-body-tertiary {
+        background-color: var(--body-bg) !important;
+    }
+}

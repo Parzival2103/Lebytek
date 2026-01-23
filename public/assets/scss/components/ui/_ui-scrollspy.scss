@@ -1,0 +1,14 @@
+.scrollspy-example{
+    height: 17rem;
+    overflow: auto;
+}
+.scrollspy-example-2 {
+    height: 23rem;
+    overflow: auto;
+}
+.simple-list-example-scrollspy a.active {
+    color: var(--primary);
+}
+[data-theme-version="dark"] .scrollspy .bg-body-tertiary {
+    background-color: var(--body-bg) !important;
+}

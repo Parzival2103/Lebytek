@@ -1,0 +1,22 @@
+/* Editable */
+
+#preloader{
+	background-color: #fff;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+    position: fixed;
+    z-index: 99999;
+    width: 100%;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	img {
+		max-width: 150px;
+	}
+}
+[data-theme-version="dark"] {
+	#preloader{
+		background-color: $d-bg;
+	}
+}
