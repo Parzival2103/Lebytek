@@ -37,7 +37,7 @@
 		<div class="deznav">
 			<div class="deznav-scroll">
 				<ul class="metismenu" id="menu">
-					<li class="menu-title"><?php echoenv('Nombre_empresa'); ?></li>
+					<li class="menu-title"><?php env('Nombre_empresa'); ?></li>
 					<li>
                         <a class="has-arrow " href="javascript:void(0);" aria-expanded="false">
 							<div class="menu-icon">
